@@ -1,0 +1,22 @@
+<div *ngIf="showMe" id="scrolltable">
+    <table>
+        <tr>
+            <th>Predmet</th>
+            <th>Semestar</th>
+            <th>Godina</th>
+            <th>ESPB</th>
+        </tr>
+        <tr *ngFor="let enrollment of uncompletedEnrollments">
+            <td>{{ enrollment.course.name }}</td>
+            <td>{{ enrollment.course.semester }}</td>
+            <td>{{ enrollment.course.year }}</td>
+            <td>{{ enrollment.course.espb }}</td>
+        </tr>
+    </table>
+</div>
+
+<!-- <ng-container *ngFor="let enrollment of enrollments | async;">
+        <p>
+            {{ enrollment.course.name }} polozen
+        </p>
+    </ng-container> -->

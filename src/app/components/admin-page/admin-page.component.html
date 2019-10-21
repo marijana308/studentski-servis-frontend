@@ -1,0 +1,16 @@
+<div>
+    <app-header></app-header>
+    <div class="menu">
+        <button type="button" (click)="allTeachers()">Predavaci</button>
+        <!-- <button type="button" (click)="allAssistants()">Asistenti</button> -->
+        <button type="button" (click)="allStudents()">Studenti</button>
+        <button type="button" (click)="allCourses()">Predmeti</button>
+        <button type="button" (click)="allPayments()">Uplate</button>
+    </div>
+    <div class="dataDisplay">
+        <app-all-professors [showMe]="showAllTeachers" ></app-all-professors>
+        <app-all-students [showMe]="showAllStudents"></app-all-students>
+        <app-all-courses [showMe]="showAllCourses"></app-all-courses>
+        <app-all-payments [showMe]="showAllPayments"></app-all-payments>
+    </div>
+</div>

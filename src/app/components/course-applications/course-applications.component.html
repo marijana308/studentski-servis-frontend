@@ -1,0 +1,36 @@
+<div *ngIf="showMe">
+        <div *ngIf="teachersApplications?.length > 0;else other_content" id="scrolltable">
+                <table>
+                    <tr>
+                        <th>Predmet</th>
+                        <th>Datum i vreme</th>
+                        <th>Mesto</th>
+                        <th>Ispitni rok</th>
+                        <th>Student</th>
+                    </tr>
+                    <tr *ngFor="let application of teachersApplications">
+                        <td>{{ application.enrollment.course.name }}</td>
+                        <td>{{ application.examDateAndPlace.date | date: 'dd.MM.yyyy HH:mm'}}</td>
+                        <td>{{ application.examDateAndPlace.place }}</td>
+                        <td>{{ application.examDateAndPlace.examPeriod.name }}</td>
+                        <td>{{ application.enrollment.student.firstname }} {{ application.enrollment.student.lastname }}</td>
+                    </tr>
+                </table>
+            </div>
+            <ng-template #other_content>
+                <div id="scrolltable">
+                    <table>
+                        <tr>
+                            <th>Predmet</th>
+                            <th>Datum i vreme</th>
+                            <th>Mesto</th>
+                            <th>Ispitni rok</th>
+                            <th>Student</th>
+                        </tr>
+                        <tr>
+                            <td colspan="5">Studenti nisu prijavili nijedan ispit u aktivnim ispitnim rokovima.</td>
+                        </tr>
+                    </table>
+                </div>
+            </ng-template>
+</div>

@@ -1,0 +1,9 @@
+<div *ngIf="showMe">
+    <div *ngIf="paymentSum > 0;else other_content">
+        <app-enrollment-item *ngFor="let enrollment of studentEnrollments | async;" [enrollment]="enrollment">
+        </app-enrollment-item>
+    </div>
+    <ng-template #other_content>
+        <p>Nemate dovoljno sredstava na racunu.</p>
+    </ng-template>
+</div>

@@ -1,0 +1,42 @@
+<div *ngIf="showMe">
+    <table>
+        <tr>
+            <th>{{ student?.firstname }} {{ student?.lastname }}, {{ student?.index }}</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>Studijski program:</td>
+            <td>{{ student?.studyProgramme.name }}</td>
+        </tr>
+        <tr>
+            <td>Godina studija:</td>
+            <td>{{ student?.year }}.</td>
+        </tr>
+        <tr>
+            <td>E-mail:</td>
+            <td>{{ student?.email }}</td>
+        </tr>
+        <tr>
+            <td>Telefon:</td>
+            <td>{{ student?.phone }}</td>
+        </tr>
+        <tr>
+            <td>Adresa:</td>
+            <td>{{ student?.address }}</td>
+        </tr>
+        <tr>
+            <td>Datum rodjenja:</td>
+            <td>{{ student?.birthday | date: 'dd.MM.yyyy.' }}</td>
+        </tr>
+        <tr>
+            <td>Mesto rodjenja:</td>
+            <td>{{ student?.birthPlace }}</td>
+        </tr>
+    </table>
+    <!-- <h1>Lični podaci</h1>
+    <p>Ime: {{ student.firstname }} {{ student.lastname }}</p>
+    <p>E-mail: {{ student.email }}</p>
+    <p>Telefon: {{ student.phone }}</p>
+    <p>Adresa: {{ student.address }}</p>
+    <p>Datum i mesto rodjenja: {{ student.birthday | date: 'dd.MM.yyyy.'}} {{ student.birthPlace }}</p> -->
+</div>

@@ -1,0 +1,45 @@
+<div *ngIf="showMe">
+    <form (ngSubmit)="saveStudent()">
+        <div>
+            <label for="firstname">Ime:</label>
+            <input id="firstname" name="firstname" [(ngModel)]="newStudent.firstname" />
+        </div>
+        <div>
+            <label for="lastname">Prezime:</label>
+            <input id="lastname" name="lastname" [(ngModel)]="newStudent.lastname" />
+        </div>
+        <!-- <div>
+            <label for="indeks">Broj indeksa:</label>
+            <input id="indeks" name="indeks" [(ngModel)]="newStudent.indeks" />
+        </div> -->
+        <div>
+            <label for="phone">Broj telefona:</label>
+            <input id="phone" name="phone" [(ngModel)]="newStudent.phone" />
+        </div>
+        <div>
+            <label for="email">E-mail:</label>
+            <input id="email" name="email" [(ngModel)]="newStudent.email" />
+        </div>
+        <div>
+            <label for="address">Adresa:</label>
+            <input id="address" name="address" [(ngModel)]="newStudent.address" />
+        </div>
+        <div>
+            <label for="birthPlace">Mesto rodjenja:</label>
+            <input id="birthPlace" name="birthPlace" [(ngModel)]="newStudent.birthPlace" />
+        </div>
+        <div>
+            <label for="birthday">Datum rodjenja:</label>
+            <input type="date" id="birthday" name="birthday" [(ngModel)]="newStudent.birthday" />
+        </div>
+        <div>
+            <label for="studyProgramme">Smer:</label>
+            <p *ngFor="let studyProgramme of studyProgrammes">
+                <input type="radio" [value]="studyProgramme" name="studyProgramme" id="studyProgramme"
+                    [(ngModel)]="selectedStudyProgramme" (change)="handleChange($event)">
+                {{ studyProgramme.name }}
+            </p>
+        </div>
+        <input type="submit" value="Sacuvaj" />
+    </form>
+</div>

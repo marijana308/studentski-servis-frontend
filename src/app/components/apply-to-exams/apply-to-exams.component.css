@@ -1,0 +1,14 @@
+p {
+    margin-top: 50px;
+    margin-left: 50px;
+    font-size: 22px;
+    color: grey;
+}
+
+div {
+    overflow-y: scroll; 
+    height: 650px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
+}

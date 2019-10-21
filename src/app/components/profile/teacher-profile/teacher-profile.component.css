@@ -1,0 +1,35 @@
+p {
+    padding-left: 50px;
+    font-size: 18px;
+    color: grey;
+}
+
+h1 {
+    padding-left: 50px;
+    margin-top: 50px;
+    color: gray;
+}
+
+table {
+    margin-top: 50px;
+    margin-left: 50px;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th {
+    padding: 30px;
+    font-size: 26px;
+    color: grey;
+    border: 1px solid #ddd;
+}
+
+td {
+    padding: 20px;
+    font-size: 18px;
+    color: grey;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(odd) {background-color: #f2f2f2;}

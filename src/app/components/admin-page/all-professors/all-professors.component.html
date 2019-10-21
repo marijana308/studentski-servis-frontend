@@ -1,0 +1,20 @@
+<div *ngIf="showMe" id="scrolltable">
+    <table>
+        <tr>
+            <th>Ime i prezime</th>
+            <th>Uloga</th>
+            <th>E-mail</th>
+            <th>Telefon</th>
+            <th>Adresa</th>
+            <th>Datum rodjenja</th>
+        </tr>
+        <tr *ngFor="let teacher of teachers">
+            <td>{{ teacher.firstname }} {{ teacher.lastname }}</td>
+            <td>{{ teacher.type }}</td>
+            <td>{{ teacher.email }}</td>
+            <td>{{ teacher.phone }}</td>
+            <td>{{ teacher.address }}</td>
+            <td>{{ teacher.birthday | date : 'dd.MM.yyyy' }}</td>
+        </tr>
+    </table>
+</div>

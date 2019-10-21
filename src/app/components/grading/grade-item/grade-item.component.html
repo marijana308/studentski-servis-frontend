@@ -1,0 +1,38 @@
+<div *ngIf="active;else other_content">
+    <table>
+        <tr>
+            <th>Ime studenta</th>
+            <th>Broj indeksa</th>
+            <th>Predmet</th>
+            <th>Datum</th>
+        </tr>
+        <tr>
+            <td>{{ application.enrollment.student.firstname }} {{ application.enrollment.student.lastname }}</td>
+            <td>{{ application.enrollment.student.index }}</td>
+            <td>{{ application.enrollment.course.name }}</td>
+            <td>{{ application.examDateAndPlace.date | date: 'dd.MM.yyyy. HH:mm'}}</td>
+        </tr>
+    </table>
+    <form class="form" (ngSubmit)="onSubmit()">
+        <input type="text" name="grade" [(ngModel)]="grade" placeholder="Unesite ocenu...">
+        <input type="submit" value="Submit" class="btn">
+    </form>
+</div>
+<ng-template #other_content>
+    <table>
+        <tr>
+            <th>Ime studenta</th>
+            <th>Broj indeksa</th>
+            <th>Predmet</th>
+            <th>Datum</th>
+            <th>Ocena</th>
+        </tr>
+        <tr>
+            <td>{{ application.enrollment.student.firstname }} {{ application.enrollment.student.lastname }}</td>
+            <td>{{ application.enrollment.student.index }}</td>
+            <td>{{ application.enrollment.course.name }}</td>
+            <td>{{ application.examDateAndPlace.date | date: 'dd.MM.yyyy. HH:mm'}}</td>
+            <td>{{ grade }}</td>
+        </tr>
+    </table>
+</ng-template>

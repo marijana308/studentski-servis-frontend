@@ -1,0 +1,24 @@
+<div *ngIf="showMe" id="scrolltable">
+    <table>
+        <tr>
+            <th>Ime i prezime</th>
+            <th>Indeks</th>
+            <th>Smer</th>
+            <th>Godina</th>
+            <th>E-mail</th>
+            <th>Telefon</th>
+            <th>Adresa</th>
+            <th>Datum rodjenja</th>
+        </tr>
+        <tr *ngFor="let student of students">
+            <td>{{ student.firstname }} {{ student.lastname }}</td>
+            <td>{{ student.index }}</td>
+            <td>{{ student.studyProgramme.name }}</td>
+            <td>{{ student.year }}</td>
+            <td>{{ student.email }}</td>
+            <td>{{ student.phone }}</td>
+            <td>{{ student.address }}</td>
+            <td>{{ student.birthday | date : 'dd.MM.yyyy' }}</td>
+        </tr>
+    </table>
+</div>

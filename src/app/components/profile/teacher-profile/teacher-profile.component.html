@@ -1,0 +1,28 @@
+<div *ngIf="showMe">
+    <table>
+        <tr>
+            <th>Licni podaci</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>Ime i prezime: </td>
+            <td>{{ teacher?.firstname }} {{ teacher?.lastname }}</td>
+        </tr>
+        <tr>
+            <td>Broj telefona:</td>
+            <td>{{ teacher?.phone }}</td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>{{ teacher?.email }}</td>
+        </tr>
+        <tr>
+            <td>Adresa:</td>
+            <td>{{ teacher?.address }}</td>
+        </tr>
+        <tr>
+            <td>Datum rodjenja:</td>
+            <td>{{ teacher?.birthday | date: 'dd.MM.yyyy.'}}</td>
+        </tr>
+    </table>
+</div>

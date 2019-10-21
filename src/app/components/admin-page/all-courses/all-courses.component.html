@@ -1,0 +1,27 @@
+<div *ngIf="showMe">
+    <div id="selectProgramme">
+        <p *ngFor="let studyProgramme of studyProgrammes">
+            <input type="radio" [value]="studyProgramme" name="studyProgramme" id="studyProgramme"
+                [(ngModel)]="selectedStudyProgramme" (change)="handleChange($event)">
+            {{ studyProgramme.name }}
+        </p>
+    </div>
+    <div id="scrolltable">
+        <table>
+            <tr>
+                <th width="35%">Naziv predmeta</th>
+                <th width="10%">Semestar</th>
+                <th width="10%">Godina</th>
+                <th width="10%">Espb</th>
+                <th width="35%">Smer</th>
+            </tr>
+            <tr *ngFor="let course of courses">
+                <td width="35%">{{ course.name }}</td>
+                <td width="10%">{{ course.semester }}</td>
+                <td width="10%">{{ course.year }}</td>
+                <td width="10%">{{ course.espb }}</td>
+                <td width="35%">{{ course.studyProgramme.name }}</td>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div *ngIf="showMe" id="scrolltable">
+    <table>
+        <tr>
+            <th>Student</th>
+            <th>Iznos uplate</th>
+            <th>Datum uplate</th>
+        </tr>
+        <tr *ngFor="let payment of payments">
+            <td>{{ payment.student.firstname }} {{ payment.student.lastname }} {{ payment.student.index }}</td>
+            <td>{{ payment.amount }}</td>
+            <td>{{ payment.date | date : 'dd.MM.yyyy mm:HH' }}</td>
+        </tr>
+    </table>
+</div>

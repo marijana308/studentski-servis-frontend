@@ -1,0 +1,15 @@
+<div>
+    <app-header></app-header>
+    <div class="menu">
+        <button type="button" (click)="showTeacherProfile()">licni podaci</button>
+        <button type="button" (click)="showTeacherCourses()">predmeti</button>
+        <button *ngIf="profesor" type="button" (click)="grading()">ocenjivanje</button>
+        <button type="button" (click)="courseApplications()">prijave ispita</button>
+    </div>
+    <div class="dataDisplay">
+        <app-teacher-profile [showMe]="showProfile"></app-teacher-profile>
+        <app-courses [showMe]="showCourses"></app-courses>
+        <app-grading [showMe]="showGrading"></app-grading>
+        <app-course-applications [showMe]="showCourseApplications"></app-course-applications>
+    </div>
+</div>

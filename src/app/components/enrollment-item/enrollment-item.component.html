@@ -1,0 +1,42 @@
+<div *ngIf="examDatesAndPlaces?.length > 0;else other_content" >
+    <form class="form" (ngSubmit)="newApplication()">
+        <p>{{ enrollment.course.name }}</p>
+        <table>
+            <tr>
+                <th></th>
+                <th>Datum i vreme</th>
+                <th>Ispitni rok</th>
+                <th>Mesto</th>
+                <th>Cena</th>
+            </tr>
+            <tr *ngFor="let examDate of examDatesAndPlaces">
+                <td><input type="radio" [value]="examDate" name="dateAndPlace" id="examDateAndPlace"
+                        [(ngModel)]="selectedDateAndPlace"></td>
+                <td>{{ examDate.date | date: 'dd.MM.yyyy. HH:mm'}}</td>
+                <td>{{ examDate.examPeriod.name }}</td>
+                <td>{{ examDate.place }}</td>
+                <td>200 din.</td>
+            </tr>
+            <tr>
+                <td colspan="5"><input type="submit" value="Potvrda" /></td>
+            </tr>
+        </table>
+    </form>
+    <br />
+</div>
+<ng-template #other_content>
+    <p>{{ enrollment.course.name }}</p>
+    <table>
+        <tr>
+            <th></th>
+            <th>Datum i vreme</th>
+            <th>Ispitni rok</th>
+            <th>Mesto</th>
+            <th>Cena</th>
+        </tr>
+        <tr>
+            <td colspan="5">Nema dostupnih termina za prijavu ovog ispita.</td>
+        </tr>
+    </table>
+    <br />
+</ng-template>

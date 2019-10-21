@@ -1,0 +1,8 @@
+<div *ngIf="showMe" id="grading">
+    <div *ngIf="applicationsForGrading?.length > 0;else other_content">
+        <app-grade-item *ngFor="let application of applicationsForGrading" [application]="application"></app-grade-item>
+    </div>
+    <ng-template #other_content>
+        <p>Trenutno nema novih ispita za ocenjivanje.</p>
+    </ng-template>
+</div>

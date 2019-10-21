@@ -1,0 +1,38 @@
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    padding: 10px;
+    font-size: 18px;
+    color: grey;
+    text-align: left;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+}
+
+td {
+    padding: 10px;
+    font-size: 18px;
+    color: grey;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+input[type=text] {
+    padding: 15px; 
+    width: 100%;
+}
+
+input[type=submit] {
+    padding: 15px; 
+    background:rgb(168, 167, 167); 
+    font-size: 18px;
+    width: 100%;
+    color: white;
+    border:0 none;
+    cursor:pointer;
+    margin-bottom: 30px;
+}

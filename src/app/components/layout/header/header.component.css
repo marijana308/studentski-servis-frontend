@@ -1,0 +1,17 @@
+.header {
+    background: rgb(26, 148, 189);
+    color: #fff;
+    text-align: right;
+    padding: 10px;
+}
+
+.header a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.header a:hover { 
+    text-decoration: underline;
+}

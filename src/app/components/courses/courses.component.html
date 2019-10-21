@@ -1,0 +1,21 @@
+<div *ngIf="showMe" id="scrolltable">
+    <table>
+        <tr>
+            <th>Naziv predmeta</th>
+            <th>Godina</th>
+            <th>Semestar</th>
+            <th>ESPB</th>
+            <th>Smer</th>
+        </tr>
+        <tr *ngFor="let teaching of teachings">
+            <td>{{ teaching.course.name }}</td>
+            <td>{{ teaching.course.year }}</td>
+            <td>{{ teaching.course.semester }}</td>
+            <td>{{ teaching.course.espb }}</td>
+            <td>{{ teaching.course.studyProgramme.name }}</td>
+        </tr>
+    </table>
+    <!-- <div *ngFor="let teaching of teachings">
+        <p>naziv predmeta: {{ teaching.course.name }}</p>
+    </div> -->
+</div>

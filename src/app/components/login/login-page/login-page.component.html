@@ -1,0 +1,13 @@
+
+<div class="container">
+  <form (ngSubmit)="login()">
+    <input type="text" id="username" name="username" [(ngModel)]="user.username" placeholder="Korisnicko ime" required
+      autofocus>
+    <input type="password" id="inputPassword" name="username" [(ngModel)]="user.password" placeholder="Lozinka"
+      required>
+    <button type="submit">Prijava</button>
+  </form>
+  <div *ngIf=wrongUsernameOrPass class="errorMessage">
+    Neispravno korisnicko ime ili lozinka.
+  </div>
+</div>

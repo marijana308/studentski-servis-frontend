@@ -1,0 +1,40 @@
+#scrolltable { 
+    margin-top: 50px; 
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 560px; 
+    overflow: auto;
+}
+#scrolltable th div {
+    position: absolute; 
+    margin-top: -20px;
+    padding: 30px;
+    font-size: 18px;
+    color: grey;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    padding: 30px;
+    font-size: 18px;
+    background-color: #ddd;
+    color: grey;
+    border: 1px solid #ddd;
+}
+
+td {
+    padding: 20px;
+    font-size: 18px;
+    color: grey;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(odd) {background-color: #f2f2f2;}
+
+tr:hover {background-color: rgb(240, 236, 236);}
+

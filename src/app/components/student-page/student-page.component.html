@@ -1,0 +1,20 @@
+<div class="page-wrapper">
+    <app-header></app-header>
+
+    <div class="menu">
+        <button type="button" (click)="showUsersProfile()">Lični podaci</button>
+        <button type="button" (click)="showCompletedEnrollments()">Položeni ispiti</button>
+        <button type="button" (click)="showUncompletedEnrollments()">Nepoloženi ispiti</button>
+        <button type="button" (click)="applyToExams()">Prijava ispita</button>
+        <button type="button" (click)="appliedToExams()">Prijavljeni ispiti</button>
+        <button type="button" (click)="showAllPayments()">Uplate</button>
+    </div>
+    <div class="dataDisplay">
+        <app-enrollments [showMe]="showUncompleted"></app-enrollments>
+        <app-completed-enrollments [showMe]="showCompleted"></app-completed-enrollments>
+        <app-profile [showMe]="showProfile"></app-profile>
+        <app-apply-to-exams [showMe]="showApplyToExams"></app-apply-to-exams>
+        <app-applied-exams [showMe]="showApplyedToExams" [examApplications]="examApplications"></app-applied-exams>
+        <app-payments [showMe]="showPayments"></app-payments>
+    </div>
+</div>
